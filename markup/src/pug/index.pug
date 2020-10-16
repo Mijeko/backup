@@ -5,37 +5,33 @@ include include/mixin/ruleItem
 block content
     .page
         .header
-            img(src="./assets/images/logo.png").logo
-            img(src="./assets/images/plane.png").plane
-            img(src="./assets/images/beer.png").beer
-            img(src="./assets/images/fog.png").fog
-            img(src="./assets/images/label.png").label
-            img(src="./assets/images/fresh-sale.png").fresh-sale
+            .label Акция действует<br>с 1 сентября до 31 октября 2020
         .clips.content-block
-            .page-title Собирай фишки —<br>получай улетные призы!
+            .page-title Собирай фишки —<br>получай улетные<br>призы!
             .page-sub-title Купи 3 литра разливного пива ANDWA и получи фишку
             .reward
-                .reward__item.x-2
-                    .reward__rate
-                        img(src="./assets/images/clip-icon.png").reward__photo
-                        img(src="./assets/images/zigzag1.png").reward__curve
-                        div x2
-                    img(src="./assets/images/lighter.png").reward__product
-                    .reward__title Зажишалка-открывашка
-                .reward__item.x-5
-                    .reward__rate
-                        img(src="./assets/images/clip-icon.png").reward__photo
-                        img(src="./assets/images/zigzag2.png").reward__curve
-                        div x5
-                    img(src="./assets/images/cap.png").reward__product
-                    .reward__title Улетная бейсболка
-                .reward__item.x-10
-                    .reward__rate
-                        img(src="./assets/images/clip-icon.png").reward__photo
-                        img(src="./assets/images/zigzag3.png").reward__curve
-                        div x10
-                    img(src="./assets/images/shirt.png").reward__product
-                    .reward__title Классная футболка
+                img.reward-img(src="./assets/images/rewards.png")
+                //.reward__item.x-2
+                //    .reward__rate
+                //        img(src="./assets/images/clip-icon.png").reward__photo
+                //        img(src="./assets/images/zigzag1.png").reward__curve
+                //        div x2
+                //    img(src="./assets/images/lighter.png").reward__product
+                //    .reward__title Зажишалка-<br>открывашка
+                //.reward__item.x-5
+                //    .reward__rate
+                //        img(src="./assets/images/clip-icon.png").reward__photo
+                //        img(src="./assets/images/zigzag2.png").reward__curve
+                //        div x5
+                //    img(src="./assets/images/cap.png").reward__product
+                //    .reward__title Улетная<br>бейсболка
+                //.reward__item.x-10
+                //    .reward__rate
+                //        img(src="./assets/images/clip-icon.png").reward__photo
+                //        img(src="./assets/images/zigzag3.png").reward__curve
+                //        div x10
+                //    img(src="./assets/images/shirt.png").reward__product
+                //    .reward__title Классная<br>футболка
             .page-title Магазины,<br>участвующие<br>в акции
             img(src="./assets/images/boom.png").map-boom
         .map.content-block
@@ -92,7 +88,4 @@ block content
                 each item,index in items
                     +ruleItem(item)
         .footer.content-block
-            img(src="./assets/images/cup.png").beer-cup
-            img(src="./assets/images/wing.png").wing
-            img(src="./assets/images/warning.png").warning
             .copyright ©2020 Барнаульский пивоваренный завод

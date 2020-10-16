@@ -191,7 +191,7 @@ gulp.task('browser-sync', function () {
 		},
 		host: 'localhost',
 		port: 8006,
-		logPrefix: "bikz-develop"
+		logPrefix: "andwa-develop"
 
 	});
 });

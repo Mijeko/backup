@@ -1,32 +1,35 @@
 .reward {
+  position: relative;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: stretch;
-  height: 750px;
-  margin-top: 5%;
-  max-width: 100%;
-  z-index: 9999;
-  padding-right: 10%;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 150px 0;
+  z-index: 999;
 
-  @media (max-width: 450px) {
+  @media (max-width: 480px) {
     flex-direction: column;
-    padding: 0;
-    height: auto;
+    margin: 50px 0;
+  }
+
+  &-img{
+    width: 100%;
+    padding-right: 10%;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    align-items: center;
     width: 15%;
+    z-index: 999;
 
     &:nth-child(2) {
       margin: 0 25%;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 1480px) {
       align-items: center;
       width: 100%;
       margin: 0 !important;
@@ -71,6 +74,10 @@
     position: relative;
     z-index: 9;
     margin-bottom: 50px;
+    //display: flex;
+    //flex-direction: column;
+    //align-content: flex-start;
+    //justify-content: space-between;
 
     div {
       position: absolute;
@@ -92,7 +99,7 @@
     position: relative;
     z-index: 99;
 
-    width: 300px;
+    height: 30%;
     object-fit: contain;
   }
 
@@ -106,8 +113,14 @@
     margin-bottom: auto;
     margin-top: 10%;
 
-    @media (max-width: 450px) {
+    @media (max-width: 1480px) {
       text-align: center;
     }
+  }
+
+  &__curve {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }

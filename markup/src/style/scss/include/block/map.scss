@@ -1,21 +1,20 @@
 .map {
   margin-top: -12%;
-  height: 1200px;
   padding: 0;
   z-index: -5;
-
-  @media (max-width: 450px) {
-    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
-    margin-top: -55%;
-  }
 
   &-boom {
     z-index: 5;
     left: 0;
     right: 0;
-    bottom: -5%;
+    bottom: -10%;
     margin: 0 auto;
+    margin-left: 20%;
     position: absolute;
     display: block;
+
+    @media (max-width: 480px) {
+      width: 80%;
+    }
   }
 }
