@@ -1,0 +1,98 @@
+include include/layer
+
+include include/mixin/ruleItem
+
+block content
+    .page
+        .header
+            img(src="./assets/images/logo.png").logo
+            img(src="./assets/images/plane.png").plane
+            img(src="./assets/images/beer.png").beer
+            img(src="./assets/images/fog.png").fog
+            img(src="./assets/images/label.png").label
+            img(src="./assets/images/fresh-sale.png").fresh-sale
+        .clips.content-block
+            .page-title Собирай фишки —<br>получай улетные призы!
+            .page-sub-title Купи 3 литра разливного пива ANDWA и получи фишку
+            .reward
+                .reward__item.x-2
+                    .reward__rate
+                        img(src="./assets/images/clip-icon.png").reward__photo
+                        img(src="./assets/images/zigzag1.png").reward__curve
+                        div x2
+                    img(src="./assets/images/lighter.png").reward__product
+                    .reward__title Зажишалка-открывашка
+                .reward__item.x-5
+                    .reward__rate
+                        img(src="./assets/images/clip-icon.png").reward__photo
+                        img(src="./assets/images/zigzag2.png").reward__curve
+                        div x5
+                    img(src="./assets/images/cap.png").reward__product
+                    .reward__title Улетная бейсболка
+                .reward__item.x-10
+                    .reward__rate
+                        img(src="./assets/images/clip-icon.png").reward__photo
+                        img(src="./assets/images/zigzag3.png").reward__curve
+                        div x10
+                    img(src="./assets/images/shirt.png").reward__product
+                    .reward__title Классная футболка
+            .page-title Магазины,<br>участвующие<br>в акции
+            img(src="./assets/images/boom.png").map-boom
+        .map.content-block
+            .map-container
+                include include/map
+        .rules.content-block
+            .page-title Полные<br>правила акции
+            ul.rules-list
+                -
+                    var items = [
+                        {
+                            'title': 'Общий срок проведения акции с 01.11.2020 по 31.12.2020'
+                        },
+                        {
+                            'title': 'К участию в акции допускаются дееспособные лица, достигшие 18-летнего возраста.'
+                        },
+                        {
+                            'title': 'Получите 1 фишку за каждые 3л разливного пива ANDWA в чеке'
+                        },
+                        {
+                            'title': 'Получить призы можно в любой торговой точке, участвующей в акции, в независимости от того, в какой из торговых точек-участников был получен буклет.'
+                        },
+                        {
+                            'title': 'Фишки должны быть вклеены в соответствующие поля буклета. Не принимаются копии буклетов и фишек, не принимаются буклеты и фишки, которые были изменены, повреждены.'
+                        },
+                        {
+                            'title': 'По одному буклету можно получить сразу несколько призов, при условии наличия соответствующего количества вклеенных фишек.'
+                        },
+                        {
+                            'title': 'При получении приза буклет остается у кассира, фишки из буклета возврату не подлежат'
+                        },
+                        {
+                            'title': 'Выдача денежной компенсации взамен приза не производится.'
+                        },
+                        {
+                            'title': 'Получение фишек возможно только при расчете за покупку. Спрашивайте фишки у кассира.'
+                        },
+                        {
+                            'title': 'Организатор акции оставляет за собой право завершить акцию досрочно, если лимит фишек, буклетов или призов будет исчерпан.'
+                        },
+                        {
+                            'title': 'Количество призов ограничено.'
+                        },
+                        {
+                            'title': 'Организатор самостоятельно определяет внешний вид, цвет, модель и иные свойства вручаемого приза, которые могут отличаться от представленных в информационных материалах.'
+                        },
+                        {
+                            'title': 'Организатор акции: ОАО «Барнаульский пивоваренный завод», место нахождения: 656922, Россия, Алтайский край, г. Барнаул, ул. Трактовая 35'
+                        },
+                        {
+                            'title': 'Подробности акции на сайте www.promo.andwa.ru или по e-mail: marketing@bpz.su'
+                        },
+                    ]
+                each item,index in items
+                    +ruleItem(item)
+        .footer.content-block
+            img(src="./assets/images/cup.png").beer-cup
+            img(src="./assets/images/wing.png").wing
+            img(src="./assets/images/warning.png").warning
+            .copyright ©2020 Барнаульский пивоваренный завод

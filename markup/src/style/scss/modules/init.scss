@@ -1,0 +1,20 @@
+@import "swiper";
+@import "bootstrap";
+@import "node_modules/lightbox2/dist/css/lightbox.min";
+
+
+.lb-nav a.lb-prev {
+  background: url(../../upload/images/prev.png) left 48% no-repeat;
+}
+
+.lb-data .lb-close {
+  background: url(../../upload/images/close.png) top right no-repeat;
+}
+
+.lb-cancel {
+  background: url(../../upload/images/loading.gif) no-repeat
+}
+
+.lb-nav a.lb-next {
+  background: url(../../upload/images/next.png) right 48% no-repeat;
+}
